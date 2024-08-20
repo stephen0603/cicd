@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "jest",
+    "test:custom": "jest src/pages/*.custom.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --port 5050",
@@ -123,5 +123,10 @@
   "packageManager": "pnpm@8.6.2",
   "msw": {
     "workerDirectory": "public"
+  },
+  "jest": {
+    "testMatch": [
+      "**/src/pages/**/*.(spec|test).[jt]s?(x)"
+    ]
   }
 }
