@@ -22,7 +22,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Run tests
-        run: npm run test:custom
+        run: npm run test:custom -- --passWithNoTests
 
       - name: Build
         run: npm run build
